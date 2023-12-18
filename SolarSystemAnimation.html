@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solar System Animation</title>
+    <style>
+        .container {
+            font-size: 10px;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .sun {
+            position: absolute;
+            width: 7.5em; /* Half the size */
+            height: 7.5em;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 3em white;
+        }
+
+        .planet,.moon{
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+        }
+        /* Planet sizes and colors */
+        .mercury { width: 1em; height: 1em; background-color: gray; box-shadow: 0 0 1em white; }
+        .venus { width: 2em; height: 2em; background-color: orange; box-shadow: 0 0 1em white }
+        .earth { width: 2.5em; height: 2.5em; background-color: aqua; box-shadow: 0 0 1em white }
+        .mars { width: 2em; height: 2em; background-color: red; box-shadow: 0 0 1em white}
+        .jupiter { width: 4em; height: 4em; background-color: sandybrown; box-shadow: 0 0 1em white }
+        .saturn { width: 3.5em; height: 3.5em; background-color: khaki; box-shadow: 0 0 1em white}
+        .uranus { width: 3em; height: 3em; background-color: lightblue; box-shadow: 0 0 1em white}
+        .neptune { width: 3em; height: 3em; background-color: blue; box-shadow: 0 0 1em white }
+        .moon {width: 0.7em; height: 0.7em;background-color: lightgray; position: absolute; box-shadow: 0 0 1em white}
+        /* Keyframes for each planet */
+        @keyframes orbitMercury {
+            from { transform: rotate(0deg) translateX(10em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(10em) rotate(-360deg); }
+        }
+
+        @keyframes orbitVenus {
+            from { transform: rotate(0deg) translateX(15em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(15em) rotate(-360deg); }
+        }
+
+        @keyframes orbitEarth {
+            from { transform: rotate(0deg) translateX(20em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(20em) rotate(-360deg); }
+        }
+
+        @keyframes orbitMars {
+            from { transform: rotate(0deg) translateX(25em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(25em) rotate(-360deg); }
+        }
+
+        @keyframes orbitJupiter {
+            from { transform: rotate(0deg) translateX(30em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(30em) rotate(-360deg); }
+        }
+
+        @keyframes orbitSaturn {
+            from { transform: rotate(0deg) translateX(35em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(35em) rotate(-360deg); }
+        }
+
+        @keyframes orbitUranus {
+            from { transform: rotate(0deg) translateX(40em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(40em) rotate(-360deg); }
+        }
+
+        @keyframes orbitNeptune {
+            from { transform: rotate(0deg) translateX(45em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(45em) rotate(-360deg); }
+        }
+
+        @keyframes orbitMoon {
+            from { transform: rotate(0deg) translateX(3em) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(3em) rotate(-360deg); }
+        }
+      
+
+        /* Animation assignments with slower speeds */
+        .mercury { animation: orbitMercury 12s linear infinite; }
+        .venus { animation: orbitVenus 14s linear infinite; }
+        .earth { animation: orbitEarth 16s linear infinite; }
+        .mars { animation: orbitMars 18s linear infinite; }
+        .jupiter { animation: orbitJupiter 20s linear infinite; }
+        .saturn { animation: orbitSaturn 22s linear infinite; }
+        .uranus { animation: orbitUranus 24s linear infinite; }
+        .neptune { animation: orbitNeptune 26s linear infinite; }
+        .moon { animation: orbitMoon 2s linear infinite; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun">
+            <div class="planet mercury"></div>
+            <div class="planet venus"></div>
+            <div class="planet earth">
+                <div class="moon"></div>
+            </div>
+            <div class="planet mars"></div>
+            <div class="planet jupiter"></div>
+            <div class="planet saturn"></div>
+            <div class="planet uranus"></div>
+            <div class="planet neptune"></div>
+        </div>
+    </div>
+</body>
+</html>
